@@ -16,6 +16,7 @@
 		873AFEC319DFDB82003F7625 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 873AFEC219DFDB82003F7625 /* Images.xcassets */; };
 		873AFEC619DFDB82003F7625 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 873AFEC419DFDB82003F7625 /* LaunchScreen.xib */; };
 		873AFED219DFDB82003F7625 /* ekoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFED119DFDB82003F7625 /* ekoTests.swift */; };
+		875021C419E02A9700652761 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875021C319E02A9700652761 /* DownloadService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		873AFECB19DFDB82003F7625 /* ekoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ekoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		873AFED019DFDB82003F7625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		873AFED119DFDB82003F7625 /* ekoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ekoTests.swift; sourceTree = "<group>"; };
+		875021C319E02A9700652761 /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				873AFEC219DFDB82003F7625 /* Images.xcassets */,
 				873AFEC419DFDB82003F7625 /* LaunchScreen.xib */,
 				873AFEB919DFDB82003F7625 /* Supporting Files */,
+				875021C319E02A9700652761 /* DownloadService.swift */,
 			);
 			path = eko;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				8586A8F519DFE7DF00631E2B /* ProximityService.swift in Sources */,
 				873AFEBE19DFDB82003F7625 /* ViewController.swift in Sources */,
 				873AFEBC19DFDB82003F7625 /* AppDelegate.swift in Sources */,
+				875021C419E02A9700652761 /* DownloadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
