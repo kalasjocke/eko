@@ -17,7 +17,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     var player : AVAudioPlayer!
     var downloadService = DownloadService()
     var timer : NSTimer!
-    var volumeTimer : NSTimer!
+    var isPlaying = false;
+    var isPaused = false;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 
                 self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("fetch"), userInfo: nil, repeats: true)
                 
-                self.play()
                 self.proximityService.startReceiving()
             }
         ))
@@ -59,6 +59,21 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func didUpdateProximity(proximity : Int) {
         NSLog(proximity.description)
+
+        if((proximity == 0 || proximity < -90) && isPlaying) {
+            self.pause()
+        }
+        
+        if((proximity < 0 && proximity > -55) && !isPlaying) {
+            self.play()
+        }
+        
+        if(self.player != nil) {
+            let level = (Float(proximity) - -65.0) / -15.0 as Float
+            player.volume = 0.2 + 0.8 * max(min(level, 1.0), 0.0) as Float
+            println("Volume \(player.volume)")
+        }
+        
     }
 
     func fetch() {
@@ -66,32 +81,39 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func play() {
-        let fileUrl = downloadService.fileURL()
-        dispatch_async(dispatch_get_main_queue(),{
+
+        if(!isPaused) {
+            self.player.play()
+        
+            let fileUrl = downloadService.fileURL()
+            if(!downloadService.fileExists(fileUrl)) { return }
+            
             let data = NSData(contentsOfURL: fileUrl)
             var err : NSError?
-
+            
             AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: &err)
             if(err != nil) { println(err) }
-
+            
             self.player = AVAudioPlayer(data: data, error: &err)
             if(err != nil) { println(err) }
             
             self.player.prepareToPlay()
-            self.player.play()
-            
-            if(self.volumeTimer == nil) {
-                self.volumeTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector:  Selector("updateVolume"), userInfo: nil, repeats: true)
-            }
-        })
-
+        }
+        
+        self.player.play()
+        self.isPlaying = true
+        self.isPaused = false
     }
     
-    func updateVolume() {
-        let vol = (Float) (1.0 + sin(NSDate().timeIntervalSince1970)) / 2.0
-        NSLog(NSString(format: "%f", vol))
-        player.volume = vol
+    func pause() {
+        if(self.player != nil) {
+            println("Pause")
+            self.player.pause()
+            self.isPaused = true
+            self.isPlaying = false
+        }
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
