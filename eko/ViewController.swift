@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     var player : AVAudioPlayer!
     var downloadService = DownloadService()
     var timer : NSTimer!
+    var volumeTimer : NSTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +60,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     func fetch() {
-        NSLog("Fetching...")
         downloadService.fetch()
     }
     
@@ -77,8 +77,18 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             
             self.player.prepareToPlay()
             self.player.play()
+            
+            if(self.volumeTimer == nil) {
+                self.volumeTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector:  Selector("updateVolume"), userInfo: nil, repeats: true)
+            }
         })
 
+    }
+    
+    func updateVolume() {
+        let vol = (Float) (1.0 + sin(NSDate().timeIntervalSince1970)) / 2.0
+        NSLog(NSString(format: "%f", vol))
+        player.volume = vol
     }
     
     override func didReceiveMemoryWarning() {
