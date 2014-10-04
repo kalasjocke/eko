@@ -8,8 +8,8 @@
 
 import Foundation
 
-let SR_API_URL = "http://localhost:4050";
-//let SR_API_URL = "http://api.sr.se";
+//let SR_API_URL = "http://localhost:4050";
+let SR_API_URL = "http://api.sr.se";
 
 
 class ParserDelegate : NSObject, NSXMLParserDelegate {
