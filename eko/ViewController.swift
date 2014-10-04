@@ -51,9 +51,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 
                 self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("fetch"), userInfo: nil, repeats: true)
                 
-                self.proximityService.startReceiving()
-                
-                self.play()
+                self.proximityService.startReceiving()                
             }
         ))
         alertController.addAction(UIAlertAction(
