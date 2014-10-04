@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8586A8F519DFE7DF00631E2B /* ProximityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586A8F419DFE7DF00631E2B /* ProximityService.swift */; };
 		873AFEBC19DFDB82003F7625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFEBB19DFDB82003F7625 /* AppDelegate.swift */; };
 		873AFEBE19DFDB82003F7625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFEBD19DFDB82003F7625 /* ViewController.swift */; };
 		873AFEC119DFDB82003F7625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873AFEBF19DFDB82003F7625 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8586A8F419DFE7DF00631E2B /* ProximityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityService.swift; sourceTree = "<group>"; };
 		873AFEB619DFDB82003F7625 /* eko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		873AFEBA19DFDB82003F7625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		873AFEBB19DFDB82003F7625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				873AFEBB19DFDB82003F7625 /* AppDelegate.swift */,
+				8586A8F419DFE7DF00631E2B /* ProximityService.swift */,
 				873AFEBD19DFDB82003F7625 /* ViewController.swift */,
 				873AFEBF19DFDB82003F7625 /* Main.storyboard */,
 				873AFEC219DFDB82003F7625 /* Images.xcassets */,
@@ -161,6 +164,15 @@
 				TargetAttributes = {
 					873AFEB519DFDB82003F7625 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = TEUG4Q43ER;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					873AFECA19DFDB82003F7625 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -212,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8586A8F519DFE7DF00631E2B /* ProximityService.swift in Sources */,
 				873AFEBE19DFDB82003F7625 /* ViewController.swift in Sources */,
 				873AFEBC19DFDB82003F7625 /* AppDelegate.swift in Sources */,
 			);
@@ -336,9 +349,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = eko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -346,9 +362,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = eko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -405,6 +424,7 @@
 				873AFED719DFDB82003F7625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		873AFED819DFDB82003F7625 /* Build configuration list for PBXNativeTarget "ekoTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +433,7 @@
 				873AFEDA19DFDB82003F7625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
