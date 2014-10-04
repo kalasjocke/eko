@@ -20,15 +20,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSLog("Started")
 
-        downloadService.fetch()
-        
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("fetch"), userInfo: nil, repeats: true)
-
-        self.play()        
-        
-        
         let action : Selector = "handleTap:"
         let tapRecognizer = UITapGestureRecognizer(target: self, action: action)
         tapRecognizer.numberOfTapsRequired = 1
@@ -47,7 +39,14 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         alertController.addAction(UIAlertAction(
             title: "Radio",
             style: .Default,
-            handler: {(action: UIAlertAction!) in self.proximityService.startReceiving() }
+            handler: {(action: UIAlertAction!) in
+                self.downloadService.fetch()
+                
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("fetch"), userInfo: nil, repeats: true)
+                
+                self.play()
+                self.proximityService.startReceiving()
+            }
         ))
         alertController.addAction(UIAlertAction(
             title: "Person",
