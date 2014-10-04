@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		873AFEBC19DFDB82003F7625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFEBB19DFDB82003F7625 /* AppDelegate.swift */; };
+		873AFEBE19DFDB82003F7625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFEBD19DFDB82003F7625 /* ViewController.swift */; };
+		873AFEC119DFDB82003F7625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873AFEBF19DFDB82003F7625 /* Main.storyboard */; };
+		873AFEC319DFDB82003F7625 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 873AFEC219DFDB82003F7625 /* Images.xcassets */; };
+		873AFEC619DFDB82003F7625 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 873AFEC419DFDB82003F7625 /* LaunchScreen.xib */; };
+		873AFED219DFDB82003F7625 /* ekoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFED119DFDB82003F7625 /* ekoTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		873AFECC19DFDB82003F7625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 873AFEAE19DFDB82003F7625 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 873AFEB519DFDB82003F7625;
+			remoteInfo = eko;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		873AFEB619DFDB82003F7625 /* eko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eko.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		873AFEBA19DFDB82003F7625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		873AFEBB19DFDB82003F7625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		873AFEBD19DFDB82003F7625 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		873AFEC019DFDB82003F7625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		873AFEC219DFDB82003F7625 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		873AFEC519DFDB82003F7625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		873AFECB19DFDB82003F7625 /* ekoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ekoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		873AFED019DFDB82003F7625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		873AFED119DFDB82003F7625 /* ekoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ekoTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		873AFEB319DFDB82003F7625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873AFEC819DFDB82003F7625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		873AFEAD19DFDB82003F7625 = {
+			isa = PBXGroup;
+			children = (
+				873AFEB819DFDB82003F7625 /* eko */,
+				873AFECE19DFDB82003F7625 /* ekoTests */,
+				873AFEB719DFDB82003F7625 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		873AFEB719DFDB82003F7625 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				873AFEB619DFDB82003F7625 /* eko.app */,
+				873AFECB19DFDB82003F7625 /* ekoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		873AFEB819DFDB82003F7625 /* eko */ = {
+			isa = PBXGroup;
+			children = (
+				873AFEBB19DFDB82003F7625 /* AppDelegate.swift */,
+				873AFEBD19DFDB82003F7625 /* ViewController.swift */,
+				873AFEBF19DFDB82003F7625 /* Main.storyboard */,
+				873AFEC219DFDB82003F7625 /* Images.xcassets */,
+				873AFEC419DFDB82003F7625 /* LaunchScreen.xib */,
+				873AFEB919DFDB82003F7625 /* Supporting Files */,
+			);
+			path = eko;
+			sourceTree = "<group>";
+		};
+		873AFEB919DFDB82003F7625 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				873AFEBA19DFDB82003F7625 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		873AFECE19DFDB82003F7625 /* ekoTests */ = {
+			isa = PBXGroup;
+			children = (
+				873AFED119DFDB82003F7625 /* ekoTests.swift */,
+				873AFECF19DFDB82003F7625 /* Supporting Files */,
+			);
+			path = ekoTests;
+			sourceTree = "<group>";
+		};
+		873AFECF19DFDB82003F7625 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				873AFED019DFDB82003F7625 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		873AFEB519DFDB82003F7625 /* eko */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 873AFED519DFDB82003F7625 /* Build configuration list for PBXNativeTarget "eko" */;
+			buildPhases = (
+				873AFEB219DFDB82003F7625 /* Sources */,
+				873AFEB319DFDB82003F7625 /* Frameworks */,
+				873AFEB419DFDB82003F7625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eko;
+			productName = eko;
+			productReference = 873AFEB619DFDB82003F7625 /* eko.app */;
+			productType = "com.apple.product-type.application";
+		};
+		873AFECA19DFDB82003F7625 /* ekoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 873AFED819DFDB82003F7625 /* Build configuration list for PBXNativeTarget "ekoTests" */;
+			buildPhases = (
+				873AFEC719DFDB82003F7625 /* Sources */,
+				873AFEC819DFDB82003F7625 /* Frameworks */,
+				873AFEC919DFDB82003F7625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				873AFECD19DFDB82003F7625 /* PBXTargetDependency */,
+			);
+			name = ekoTests;
+			productName = ekoTests;
+			productReference = 873AFECB19DFDB82003F7625 /* ekoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		873AFEAE19DFDB82003F7625 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "E+E";
+				TargetAttributes = {
+					873AFEB519DFDB82003F7625 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					873AFECA19DFDB82003F7625 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 873AFEB519DFDB82003F7625;
+					};
+				};
+			};
+			buildConfigurationList = 873AFEB119DFDB82003F7625 /* Build configuration list for PBXProject "eko" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 873AFEAD19DFDB82003F7625;
+			productRefGroup = 873AFEB719DFDB82003F7625 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				873AFEB519DFDB82003F7625 /* eko */,
+				873AFECA19DFDB82003F7625 /* ekoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		873AFEB419DFDB82003F7625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873AFEC119DFDB82003F7625 /* Main.storyboard in Resources */,
+				873AFEC619DFDB82003F7625 /* LaunchScreen.xib in Resources */,
+				873AFEC319DFDB82003F7625 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873AFEC919DFDB82003F7625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		873AFEB219DFDB82003F7625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873AFEBE19DFDB82003F7625 /* ViewController.swift in Sources */,
+				873AFEBC19DFDB82003F7625 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873AFEC719DFDB82003F7625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873AFED219DFDB82003F7625 /* ekoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		873AFECD19DFDB82003F7625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 873AFEB519DFDB82003F7625 /* eko */;
+			targetProxy = 873AFECC19DFDB82003F7625 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		873AFEBF19DFDB82003F7625 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				873AFEC019DFDB82003F7625 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		873AFEC419DFDB82003F7625 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				873AFEC519DFDB82003F7625 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		873AFED319DFDB82003F7625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		873AFED419DFDB82003F7625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		873AFED619DFDB82003F7625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = eko/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		873AFED719DFDB82003F7625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = eko/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		873AFED919DFDB82003F7625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ekoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eko.app/eko";
+			};
+			name = Debug;
+		};
+		873AFEDA19DFDB82003F7625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ekoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eko.app/eko";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		873AFEB119DFDB82003F7625 /* Build configuration list for PBXProject "eko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873AFED319DFDB82003F7625 /* Debug */,
+				873AFED419DFDB82003F7625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		873AFED519DFDB82003F7625 /* Build configuration list for PBXNativeTarget "eko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873AFED619DFDB82003F7625 /* Debug */,
+				873AFED719DFDB82003F7625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		873AFED819DFDB82003F7625 /* Build configuration list for PBXNativeTarget "ekoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873AFED919DFDB82003F7625 /* Debug */,
+				873AFEDA19DFDB82003F7625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 873AFEAE19DFDB82003F7625 /* Project object */;
+}
