@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8586A8F519DFE7DF00631E2B /* ProximityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586A8F419DFE7DF00631E2B /* ProximityService.swift */; };
+		85AE528919E047B800006636 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AE528819E047B800006636 /* CoreLocation.framework */; };
+		85AE528B19E047BF00006636 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AE528A19E047BF00006636 /* CoreBluetooth.framework */; };
 		873AFEBC19DFDB82003F7625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFEBB19DFDB82003F7625 /* AppDelegate.swift */; };
 		873AFEBE19DFDB82003F7625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFEBD19DFDB82003F7625 /* ViewController.swift */; };
 		873AFEC119DFDB82003F7625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873AFEBF19DFDB82003F7625 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		8586A8F419DFE7DF00631E2B /* ProximityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityService.swift; sourceTree = "<group>"; };
+		85AE528819E047B800006636 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		85AE528A19E047BF00006636 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		873AFEB619DFDB82003F7625 /* eko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		873AFEBA19DFDB82003F7625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		873AFEBB19DFDB82003F7625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AE528B19E047BF00006636 /* CoreBluetooth.framework in Frameworks */,
+				85AE528919E047B800006636 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,8 @@
 		873AFEAD19DFDB82003F7625 = {
 			isa = PBXGroup;
 			children = (
+				85AE528A19E047BF00006636 /* CoreBluetooth.framework */,
+				85AE528819E047B800006636 /* CoreLocation.framework */,
 				873AFEB819DFDB82003F7625 /* eko */,
 				873AFECE19DFDB82003F7625 /* ekoTests */,
 				873AFEB719DFDB82003F7625 /* Products */,
