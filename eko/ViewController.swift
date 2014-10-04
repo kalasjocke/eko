@@ -14,11 +14,16 @@ import AVFoundation
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
     var proximityService : ProximityService!
-    var player : AVAudioPlayer!
-    var downloadService = DownloadService()
+    var downloadService : DownloadService!
+    var audioService : AudioService!
+
     var timer : NSTimer!
-    var isPlaying = false;
-    var isPaused = false;
+    
+    required init(coder: NSCoder) {
+        super.init(coder: coder)
+        self.downloadService = DownloadService()
+        self.audioService = AudioService(downloadService: downloadService)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +52,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("fetch"), userInfo: nil, repeats: true)
                 
                 self.proximityService.startReceiving()
+                
+                self.play()
             }
         ))
         alertController.addAction(UIAlertAction(
@@ -60,20 +67,16 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     func didUpdateProximity(proximity : Int) {
         NSLog(proximity.description)
 
-        if((proximity == 0 || proximity < -90) && isPlaying) {
+        if(proximity == 0 || proximity < -90) {
             self.pause()
         }
         
-        if((proximity < 0 && proximity > -55) && !isPlaying) {
+        if(proximity < 0 && proximity > -55) {
             self.play()
         }
         
-        if(self.player != nil) {
-            let level = (Float(proximity) - -65.0) / -15.0 as Float
-            player.volume = 0.2 + 0.8 * max(min(level, 1.0), 0.0) as Float
-            println("Volume \(player.volume)")
-        }
-        
+        let level = (Float(proximity) - -65.0) / -15.0 as Float
+        audioService.setVolume(0.2 + 0.8 * max(min(level, 1.0), 0.0) as Float)
     }
 
     func fetch() {
@@ -81,37 +84,11 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func play() {
-
-        if(!isPaused) {
-            self.player.play()
-        
-            let fileUrl = downloadService.fileURL()
-            if(!downloadService.fileExists(fileUrl)) { return }
-            
-            let data = NSData(contentsOfURL: fileUrl)
-            var err : NSError?
-            
-            AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: &err)
-            if(err != nil) { println(err) }
-            
-            self.player = AVAudioPlayer(data: data, error: &err)
-            if(err != nil) { println(err) }
-            
-            self.player.prepareToPlay()
-        }
-        
-        self.player.play()
-        self.isPlaying = true
-        self.isPaused = false
+        audioService.play()
     }
     
     func pause() {
-        if(self.player != nil) {
-            println("Pause")
-            self.player.pause()
-            self.isPaused = true
-            self.isPlaying = false
-        }
+        audioService.pause()
     }
     
     

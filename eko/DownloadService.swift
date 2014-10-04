@@ -61,6 +61,7 @@ class DownloadService : NSObject {
         var parserDelegate = ParserDelegate()
         parser.delegate = parserDelegate
         parser.parse()
+        if(parserDelegate.urls.count == 0) { return }
         let audioUrl = NSURL(string: parserDelegate.urls.first!)
         
         println("Fetching \(audioUrl)")

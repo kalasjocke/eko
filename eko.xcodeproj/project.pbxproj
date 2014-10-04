@@ -10,6 +10,8 @@
 		8586A8F519DFE7DF00631E2B /* ProximityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586A8F419DFE7DF00631E2B /* ProximityService.swift */; };
 		85AE528919E047B800006636 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AE528819E047B800006636 /* CoreLocation.framework */; };
 		85AE528B19E047BF00006636 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AE528A19E047BF00006636 /* CoreBluetooth.framework */; };
+		87068B6519E07A0C009947BB /* vinjett.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 87068B6419E07A0C009947BB /* vinjett.m4a */; };
+		87068B6719E07D47009947BB /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87068B6619E07D47009947BB /* AudioService.swift */; };
 		873AFEBC19DFDB82003F7625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFEBB19DFDB82003F7625 /* AppDelegate.swift */; };
 		873AFEBE19DFDB82003F7625 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873AFEBD19DFDB82003F7625 /* ViewController.swift */; };
 		873AFEC119DFDB82003F7625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873AFEBF19DFDB82003F7625 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 		8586A8F419DFE7DF00631E2B /* ProximityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityService.swift; sourceTree = "<group>"; };
 		85AE528819E047B800006636 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		85AE528A19E047BF00006636 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		87068B6419E07A0C009947BB /* vinjett.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = vinjett.m4a; sourceTree = "<group>"; };
+		87068B6619E07D47009947BB /* AudioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		873AFEB619DFDB82003F7625 /* eko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		873AFEBA19DFDB82003F7625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		873AFEBB19DFDB82003F7625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87068B6119E079D4009947BB /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				87068B6419E07A0C009947BB /* vinjett.m4a */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
 		873AFEAD19DFDB82003F7625 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +101,7 @@
 		873AFEB819DFDB82003F7625 /* eko */ = {
 			isa = PBXGroup;
 			children = (
+				87068B6119E079D4009947BB /* assets */,
 				873AFEBB19DFDB82003F7625 /* AppDelegate.swift */,
 				8586A8F419DFE7DF00631E2B /* ProximityService.swift */,
 				873AFEBD19DFDB82003F7625 /* ViewController.swift */,
@@ -97,6 +110,7 @@
 				873AFEC419DFDB82003F7625 /* LaunchScreen.xib */,
 				873AFEB919DFDB82003F7625 /* Supporting Files */,
 				875021C319E02A9700652761 /* DownloadService.swift */,
+				87068B6619E07D47009947BB /* AudioService.swift */,
 			);
 			path = eko;
 			sourceTree = "<group>";
@@ -175,7 +189,7 @@
 				TargetAttributes = {
 					873AFEB519DFDB82003F7625 = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = TEUG4Q43ER;
+						DevelopmentTeam = 4ZZR82MCGF;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -187,6 +201,7 @@
 					};
 					873AFECA19DFDB82003F7625 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 4ZZR82MCGF;
 						TestTargetID = 873AFEB519DFDB82003F7625;
 					};
 				};
@@ -218,6 +233,7 @@
 				873AFEC119DFDB82003F7625 /* Main.storyboard in Resources */,
 				873AFEC619DFDB82003F7625 /* LaunchScreen.xib in Resources */,
 				873AFEC319DFDB82003F7625 /* Images.xcassets in Resources */,
+				87068B6519E07A0C009947BB /* vinjett.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87068B6719E07D47009947BB /* AudioService.swift in Sources */,
 				8586A8F519DFE7DF00631E2B /* ProximityService.swift in Sources */,
 				873AFEBE19DFDB82003F7625 /* ViewController.swift in Sources */,
 				873AFEBC19DFDB82003F7625 /* AppDelegate.swift in Sources */,
